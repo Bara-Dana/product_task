@@ -13,9 +13,9 @@
 <div class="row">
 
     <?php foreach ($data as $product) : ?>
-        <div class="col-lg-3 col-md-6 col-sm-12  text-sm-center ">
+        <div class="col-lg-3 col-md-6 col-sm-12  text-sm-center">
         <div class="card">
-
+            
         <p><input style="margin-right: 80%" id="checkbox_id" type="checkbox" class="select text-lf-center" name="is_selected[]" ></p>
 
                 <p class="card-text"> <?php echo $product->getSku(); ?>
