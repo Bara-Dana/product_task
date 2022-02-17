@@ -28,8 +28,8 @@
     <div class="form-group">
         <label>Choose Type</label>
 
-        <select class="form-control" name="item" id="type">
-            <option value="text" diplay="block">--Type Switcher--</option>
+        <select class="form-attributes" name="item" id="type">
+            <option value="text" >--Type Switcher--</option>
 
             <option value="dvd">DVD</option>
             <option value="furniture">Furniture</option>
@@ -38,26 +38,26 @@
     </div>
     <div>
         <div class="dvd-attributes">
-            <label for="form-att" class="form-label">Size</label>
-            <input name="size" type="number" class="form-att" display="block">
+            <label for="form-attrubutes" class="form-label">Size</label>
+            <input name="size" type="number" class="form-attrubutes" display="block">
         </div>
     </div>
 
     <div>
         <div class="book-attributes">
-            <label for="form-att" class="form-label">Weight</label>
-            <input name="weight" type="number" class="form-att" display="block">
+            <label for="form-attrubures" class="form-label">Weight</label>
+            <input name="weight" type="number" class="form-attrubutes" display="block">
         </div>
     </div>
 
     <div>
         <div class="furniture-attributes">
-            <label for="form-att" class="form-label">Height</label>
-            <input name="height" type="number" class="form-att" display="block">
-            <label for="form-att" class="form-label">Width</label>
-            <input name="width" type="number" class="form-att" display="block">
-            <label for="form-att" class="form-label">Lenght</label>
-            <input name="lenght" type="number" class="form-att" display="block">
+            <label for="form-attrubutes" class="form-label">Height</label>
+            <input name="height" type="number" class="form-attrubutes" display="block">
+            <label for="form-attrubutes" class="form-label">Width</label>
+            <input name="width" type="number" class="form-attrubutes" display="block">
+            <label for="form-attrubutes" class="form-label">Lenght</label>
+            <input name="lenght" type="number" class="form-attrubutes" display="block">
         </div>
     </div>
 

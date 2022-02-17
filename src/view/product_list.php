@@ -10,18 +10,23 @@
     <a href="<?php echo URLROOT; ?>/products/deleteProduct" class="btn btn-danger">DELETE</a>
 </div>
 
-<section class="threeColumns">
+<div class="row">
 
     <?php foreach ($data as $product) : ?>
-        <div class="card-body">
-            <p class="card-text"> <?php echo $product->getSku(); ?>
-            <p class="card-text"> <?php echo $product->getName(); ?>
-            <p class="card-text"> <?php echo $product->getPrice(); ?>
-            <p class="card-text"> <?php echo $product->getAttribute()->getDisplayAttributes(); ?> </>
+        <div class="col-lg-3 col-md-6 col-sm-12  text-sm-center ">
+        <div class="card">
+
+        <p><input style="margin-right: 80%" id="checkbox_id" type="checkbox" class="select text-lf-center" name="is_selected[]" ></p>
+
+                <p class="card-text"> <?php echo $product->getSku(); ?>
+                <p class="card-text"> <?php echo $product->getName(); ?>
+                <p class="card-text"> <?php echo $product->getPrice(); ?>$
+                <p class="card-text"> <?php echo $product->getAttribute()->getDisplayAttributes(); ?> </>
+            </div>
         </div>
     <?php endforeach; ?>
 
-</section>
+</div>
 
 
 <?php require_once APPROOT . '/view/includes/footer.php'; ?>

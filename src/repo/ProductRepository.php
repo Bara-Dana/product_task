@@ -108,7 +108,6 @@ class ProductRepository
     }
     public function deleteProduct($productsId)
     {
-        echo'aici';
         try {
             $dsn = "mysql:host=localhost;dbname=productdb";
             $db = new PDO($dsn, 'root', '');
