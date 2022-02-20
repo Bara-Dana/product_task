@@ -13,10 +13,13 @@ class Products extends BaseController
         $this->view('product_list', $prodList);
     }
 
-    public function deleteProduct($data = [])
+    public function deleteProduct()
     {
-        $this->repo->deleteProduct($data);
-        
-        redirect('products/index');
+        if (isset($_POST['is_selected'])) {
+
+            $this->repo->deleteProduct($_POST['is_selected']);
+
+            redirect('products/index');
+        }
     }
 }
