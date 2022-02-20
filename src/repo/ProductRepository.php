@@ -24,16 +24,12 @@ class ProductRepository
     //     $this->db->execute();
     // }
 
-    public function delete($itemIds)
-    {
-    }
+
 
 
     public function getProducts()
     {
         $dsn = "mysql:host=localhost;dbname=productdb";
-
-
         try {
             $db = new PDO($dsn, 'root', '');
             $statement = $db->prepare("SELECT * FROM `prod`");
@@ -66,7 +62,7 @@ class ProductRepository
 
     public function addProduct($data)
     {
-        $product = new ProductClass(0, $data['sku'], $data['name'], $data['price']);
+        $product = new ProductClass(0, $data['sku'], $data['name'], (float)$data['price']);
         if (isset($data['size'])) {
             $product->setAttribute(new DvdClass((float) $data['size']));
         } else if (isset($data['weight'])) {
@@ -108,17 +104,19 @@ class ProductRepository
     }
     public function deleteProduct($productsId)
     {
+        echo $_POST['is_selected'];
         try {
             $dsn = "mysql:host=localhost;dbname=productdb";
             $db = new PDO($dsn, 'root', '');
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $db->setAttribute(PDO::ATTR_PERSISTENT, true);
+
             foreach ($productsId as $id) {
-                $statement = $db->prepare(  "DELETE FROM `prod` WHERE `prod`.`id` =:id;");
+                $statement = $db->prepare("DELETE FROM `prod` WHERE `prod`.`id` =:id;");
                 $statement->bindValue(':id', $id, PDO::PARAM_INT);
-                $statement->execute();}
-            
+                $statement->execute();
+            }
         } catch (PDOException $e) {
             $error = $e->getMessage();
             echo $error;

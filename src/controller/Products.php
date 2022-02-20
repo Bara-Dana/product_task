@@ -16,6 +16,7 @@ class Products extends BaseController
     public function deleteProduct($data = [])
     {
         $this->repo->deleteProduct($data);
+        
         redirect('products/index');
     }
 }

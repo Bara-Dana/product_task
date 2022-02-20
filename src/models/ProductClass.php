@@ -17,6 +17,7 @@ class ProductClass
         $this->name = $name;
         $this->price = $price;
     }
+    
     public function setId($id)
     {
         $this->id = $id;
@@ -69,6 +70,7 @@ class ProductClass
         $initialParams = array(':sku' => $this->sku, ':name' => $this->name, ':price' => $this->price, ':size'=>null, ':weight'=>null,':height'=>null, ':width'=>null, ':lenght'=>null);
         return $this->attribute->getParams($initialParams);
         
-        
+
     }
+    
 }

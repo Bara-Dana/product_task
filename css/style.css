@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+   
   }
   
   body {
@@ -39,6 +40,9 @@
       width: 100%;
       display: block;
       margin-bottom: 20px;
+    }
+    .input{
+      margin-right: 80%
     }
     
   }
