@@ -63,10 +63,10 @@ class ProductRepository
     public function addProduct($data)
     {
         $product = new ProductClass(0, $data['sku'], $data['name'], (float)$data['price']);
-        if (isset($data['size'])) {
+        if (isset($data['size']) && $data['size']) {
             $product->setAttribute(new DvdClass((float) $data['size']));
-        } else if (isset($data['weight'])) {
-            $product->setAttribute(new BookClass($data['weight']));
+        } else if (isset($data['weight']) && $data['weight']) {
+            $product->setAttribute(new BookClass((float)$data['weight']));
         } else {
             $product->setAttribute(new FurnitureClass($data['height'], $data['width'], $data['lenght']));
         }

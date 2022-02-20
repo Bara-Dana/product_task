@@ -13,10 +13,7 @@ class Add extends BaseController
     public function addProduct()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            
-          
-            $_POST = filter_input_array(INPUT_POST);
-          
+
             $this->repo->addProduct($_POST);
         }
     }

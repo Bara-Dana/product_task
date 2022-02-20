@@ -2,7 +2,7 @@
 
 
 
-<form  name="product-form" method="POST" action="<?php echo URLROOT; ?>/products/deleteProduct">
+<form name="product-form" method="POST" action="<?php echo URLROOT; ?>/products/deleteProduct">
 
 <h1>Product List</h1>
 
