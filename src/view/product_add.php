@@ -3,24 +3,21 @@
 <h1>Product Add</h1>
 
 <form id="product_form" name="product-form" method="POST" action="<?php echo URLROOT; ?>/add/addProduct">
-    <p>
-        <?php if ($data) echo $data ?>
-    </p>
 
     <div class="d-flex justify-content-end">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Save</button><br> <br>
         <a href="<?php echo URLROOT; ?>" class="btn btn-danger pull-right">Cancel</a>
 
     </div>
     <hr>
     <div class="form-group" id="sku">
         <label for="form-control" class="form-label">SKU</label>
-        <input name="sku" type="text" class="form-control" id="sku" placeholder="sku - must be unique" required >
+        <input name="sku" type="text" class="form-control" id="sku" placeholder="sku - must be unique" required>
     </div>
 
     <div class="form-group" id="name">
         <label for="form-control" class="form-label">Name</label>
-        <input name="name" type="text" class="form-control" id="name" placeholder="name"  required>
+        <input name="name" type="text" class="form-control" id="name" placeholder="name" required>
         <?php
         ?>
     </div>
@@ -45,7 +42,7 @@
         <div class="dvd attributes" style="display: none;">
             <label for="form-group" class="form-label">Size</label>
             <input id="size" name="size" type="number" class="form-group" display="block" step="0.01">
-
+            <p>Please, provide size</p>
         </div>
     </div>
 
@@ -53,7 +50,7 @@
         <div class="book attributes" style="display: none">
             <label for="form-group" class="form-label">Weight</label>
             <input id="weight" name="weight" type="number" class="form-group" display="block" step="0.01">
-
+            <p>Please, provide weight</p>
         </div>
     </div>
 
@@ -65,7 +62,7 @@
             <input id="width" name="width" type="number" class="form-group" display="block" step="0.01">
             <label for="form-group" class="form-label">Lenght</label>
             <input id="lenght" name="lenght" type="number" class="form-group" display="block" step="0.01">
-
+            <p>Please, provide dimensions</p>
 
         </div>
     </div>

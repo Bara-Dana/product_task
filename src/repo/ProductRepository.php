@@ -99,7 +99,12 @@ class ProductRepository
             redirect('products');
         } catch (PDOException $e) {
             $error = $e->getMessage();
-            echo $error;
+            if(strpos($error, 'sku') !== false){
+                echo 'Sku already exist, please try another sku';
+            }else{
+                echo $error;
+            }
+            
         }
     }
     public function deleteProduct($productsId)

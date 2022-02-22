@@ -10,7 +10,7 @@
 
     <a href="<?php echo URLROOT; ?>/add" class="btn btn-primary pull-right">ADD</a>
 
-    <button type="submit" class="btn btn-danger">DELETE</button>
+    <button type="submit" class="btn btn-danger">MASS DELETE</button>
 </div>
 <hr>
 
