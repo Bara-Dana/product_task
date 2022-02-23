@@ -109,7 +109,6 @@ class ProductRepository
     }
     public function deleteProduct($productsId)
     {
-        echo $_POST['is_selected'];
         try {
             $dsn = "mysql:host=localhost;dbname=productdb";
             $db = new PDO($dsn, 'root', '');
