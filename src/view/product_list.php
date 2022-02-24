@@ -20,9 +20,8 @@
         <div class="col-lg-3 col-md-6 col-sm-12  text-sm-center ">
             <div class="card">
 
-                <p><input style="margin-right: 80%" id="checkbox_id" type="checkbox" class="select text-lf-center" name="is_selected[]"
+                <p><input style="margin-right: 80%" id=",delete-checkbox" type="checkbox" class="delete-checkbox" name="is_selected[]"
                 value="<?php echo $product->getId(); ?>"></p>
-                <!-- <input type="hidden" name="is_selected" /> -->
 
                 <p class="card-text"> <?php echo $product->getSku(); ?>
                 <p class="card-text"> <?php echo $product->getName(); ?>

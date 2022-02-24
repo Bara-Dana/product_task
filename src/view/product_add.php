@@ -10,19 +10,19 @@
 
     </div>
     <hr>
-    <div class="form-group" id="sku">
+    <div class="form-group">
         <label for="form-control" class="form-label">SKU</label>
         <input name="sku" type="text" class="form-control" id="sku" placeholder="sku - must be unique" required>
     </div>
 
-    <div class="form-group" id="name">
+    <div class="form-group">
         <label for="form-control" class="form-label">Name</label>
         <input name="name" type="text" class="form-control" id="name" placeholder="name" required>
         <?php
         ?>
     </div>
 
-    <div class="form-group" id="price">
+    <div class="form-group">
         <label for="form-control" class="form-label">Price</label>
         <input name="price" type="number" class="form-control" id="price" placeholder="price" step="0.01" required>
     </div>
@@ -39,7 +39,7 @@
         </select>
     </div>
     <div>
-        <div class="dvd attributes" style="display: none;">
+        <div class="dvd attributes" id="dvd" style="display: none;">
             <label for="form-group" class="form-label">Size</label>
             <input id="size" name="size" type="number" class="form-group" display="block" step="0.01">
             <p>Please, provide size</p>
@@ -47,7 +47,7 @@
     </div>
 
     <div>
-        <div class="book attributes" style="display: none">
+        <div class="book attributes" id="book" style="display: none">
             <label for="form-group" class="form-label">Weight</label>
             <input id="weight" name="weight" type="number" class="form-group" display="block" step="0.01">
             <p>Please, provide weight</p>
@@ -55,7 +55,7 @@
     </div>
 
     <div>
-        <div class="furniture attributes" style="display: none">
+        <div class="furniture attributes" id="furniture" style="display: none">
             <label for="form-group" class="form-label">Height</label>
             <input id="height" name="height" type="number" class="form-group" display="block" step="0.01">
             <label for="form-group" class="form-label">Width</label>

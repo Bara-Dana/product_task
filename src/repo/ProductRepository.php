@@ -14,19 +14,6 @@ class ProductRepository
         require_once "./src/models/FurnitureClass.php";
     }
 
-    // public function add(ProductClass $product)
-    // {
-    //     $sql = 'INSERT INTO prod (sku, name, price, size, weight,  height, lenght, width) VALUES (:sku, :name, :price, :size, :weight, :height:lenght, :width)';
-    //     $this->db->query($sql);
-    //     foreach ($product->getParams() as $key => $value) {
-    //         $this->db->bind($key, $value);
-    //     }
-    //     $this->db->execute();
-    // }
-
-
-
-
     public function getProducts()
     {
         $dsn = "mysql:host=localhost;dbname=productdb";
@@ -52,12 +39,16 @@ class ProductRepository
                     $product->setAttribute(new FurnitureClass($item->height, $item->width, $item->lenght));
                 }
                 $list[] = $product;
+                
             }
+            
             return $list;
         } catch (PDOException $e) {
             $error = $e->getMessage();
             echo $error;
+            
         }
+       $db = null;
     }
 
     public function addProduct($data)
@@ -104,7 +95,7 @@ class ProductRepository
             }else{
                 echo $error;
             }
-            
+            $db = null;
         }
     }
     public function deleteProduct($productsId)
@@ -125,5 +116,6 @@ class ProductRepository
             $error = $e->getMessage();
             echo $error;
         }
+        $db = null;
     }
 }

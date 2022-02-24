@@ -15,11 +15,13 @@ class Products extends BaseController
 
     public function deleteProduct()
     {
-        if (isset($_POST['is_selected'])) {
+        if (isset($_POST['is_selected'])>0) {
 
             $this->repo->deleteProduct($_POST['is_selected']);
 
             redirect('products/index');
+        }else{
+            redirect('');
         }
     }
 }
